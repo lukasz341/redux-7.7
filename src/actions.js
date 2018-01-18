@@ -31,10 +31,10 @@ function removeComment(id){
     }
 }
 
-function ThumbUpComment(id){
+function ThumbUpComment(commentId){
         return {
             type: THUMB_UP_COMMENT,
-            id      
+            id: commentId     
         }
     }
 
@@ -46,14 +46,15 @@ function ThumbUpComment(id){
     }
 
 
-
+/*
 dispatch(addComment('nowy komentarz!'));
 dispatch(editComment('20','wyedytowany komentarz!'));
 dispatch(removeComment('20'));
 dispatch(ThumbUpComment('20'));
-dispatch(ThumbDownComment('20'));
+dispatch(ThumbDownComment('20')); */
 
-export addComment;
+
+export {addComment};
 export editComment;
 export removeComment;
 export ThumbUpComment;
