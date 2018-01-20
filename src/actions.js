@@ -1,4 +1,4 @@
-import uuid from uuid;
+import uuid from 'uuid';
 
 export const ADD_COMMENT = 'ADD_COMMENT';
 export const EDIT_COMMENT = 'EDIT_COMMENT';
@@ -46,16 +46,10 @@ function ThumbUpComment(commentId){
     }
 
 
-/*
-dispatch(addComment('nowy komentarz!'));
-dispatch(editComment('20','wyedytowany komentarz!'));
-dispatch(removeComment('20'));
-dispatch(ThumbUpComment('20'));
-dispatch(ThumbDownComment('20')); */
-
-
-export {addComment};
-export editComment;
-export removeComment;
-export ThumbUpComment;
-export ThumbDownComment;
+    export {
+            addComment,
+            editComment,
+            removeComment,
+            ThumbUpComment,
+            ThumbDownComment
+        }

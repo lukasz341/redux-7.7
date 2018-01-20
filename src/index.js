@@ -6,11 +6,10 @@ import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducer from './reducers';
+import {addComment} from './actions';
 
 const store = createStore(reducer);
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
 
 ReactDOM.render(
     <Provider store={store}>
@@ -19,5 +18,8 @@ ReactDOM.render(
     document.getElementById('root')
   );
 
-  store.dispatch(addComment('pierwszy komentarz'));
+  registerServiceWorker();
+  
   store.dispatch(addComment('drugi komentarz'));
+  store.dispatch(addComment('pierwszy komentarz'));
+  
